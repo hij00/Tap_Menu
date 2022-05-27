@@ -38,27 +38,32 @@
             z-index: 50;
         }
         /* z-index는 포지션이랑 */
+        
         .menu_wrap{
             width: 100%;
-            height: 700px;
+            height: 0;
             background-color: beige;
             position: absolute;
             /* 헤더에 히든을 써도 안 가려지면 body에 overflow-x: hidden 
             바디에 히든 걸었을때 주석 걸어놓고 모든 작업이 끝나면 주석풀기*/
             top: 0;
-            left: 100%;
+            left: 0;
+            /* 옆에서 나오는 모션은 left활용
+               위에서 나오는 모션은 top을 활용하거나(전체적으로 떨어짐)
+                     높이값을 0 주고(height: 0) 체크했을때 높이값 넣으면 됨(접히면서 떨어짐?) */
             font-size: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             transition-duration: 0.5s;
+            overflow: hidden;
         }
         .menu_wrap li{
             margin-bottom: 50px;
         }
         #menu_in:checked~.menu_wrap{
-            left: 0;
+            height: 700px;
         }
 
 
