@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brotherChoose</title>
+
+    <!-- 웹기능사 실기 100% 나옴 -->
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+        형제선택자
+        => 반드시 하나의 기준이 있어야함 
+        */
+
+        h1+h2{
+            color: coral;
+        }
+        /* => 인접 형제관계 선택자
+        +는 더하기가 아니라 선택자를 선택하는?
+        +는 바로 뒤의 선택자만 선택 가능 */
+
+        h1~h3{
+            color: lightblue;
+        }
+        /* => 형제관계 선택자
+        기준이 되는 선택자 뒷쪽 어딘가에 있는 형제를 선택할 때 사용 */
+
+        h1~h4{
+            color: beige;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- 
+    hover는 자기자신이나 자식에게 가능
+    형제관계(같은 라인)? -->
+
+    <h1>첫번째 엘리</h1>
+    <h2>두번째 엘리</h2>
+    <h3>세번째 엘리</h3>
+    <h3>네번째 엘리</h3>
+    <h4>다섯번째 엘리</h4>
+    
+</body>
+</html>

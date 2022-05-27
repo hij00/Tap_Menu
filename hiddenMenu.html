@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hidden_menu</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            overflow: hidden;
+        }
+        li{
+            list-style: none;
+        }
+        header{
+            width: 100%;
+            height: 60px;
+            background-color: lightgray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        input{
+            display: none;
+        }
+        .menu_btn{
+            font-size: 30px;
+            cursor: pointer;
+            position: relative;
+            z-index: 50;
+        }
+        /* z-index는 포지션이랑 */
+        .menu_wrap{
+            width: 100%;
+            height: 700px;
+            background-color: beige;
+            position: absolute;
+            /* 헤더에 히든을 써도 안 가려지면 body에 overflow-x: hidden 
+            바디에 히든 걸었을때 주석 걸어놓고 모든 작업이 끝나면 주석풀기*/
+            top: 0;
+            left: 100%;
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition-duration: 0.5s;
+        }
+        .menu_wrap li{
+            margin-bottom: 50px;
+        }
+        #menu_in:checked~.menu_wrap{
+            left: 0;
+        }
+
+
+        section{
+            height: 500px;
+            background-color: lightcoral;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <header>
+            <div class="logo">LOGO</div>
+            <input type="checkbox" name="" id="menu_in">
+            <label for="menu_in" class="menu_btn">=</label>
+            <ul class="menu_wrap">
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+            </ul>
+        </header>
+
+        <section>section</section>
+    </div>
+
+</body>
+</html>
